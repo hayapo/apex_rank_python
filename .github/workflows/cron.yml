@@ -28,8 +28,11 @@ jobs:
       
       - uses: Gr1N/setup-poetry@v4
 
-      - name: Install Dependencies
+      - name: Install 
         run: poetry install --no-interaction
       
+      - name: Dependencies
+        run: pip install -r requirements.txt
+
       - name: Run main.py
         run: python main.py

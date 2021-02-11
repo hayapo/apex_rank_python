@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.8.0'
@@ -37,5 +37,4 @@ jobs:
         run: poetry install --no-interaction
 
       - uses: Run main.py
-        with:
-          command: pyhton3 main.py
+        run: pyhton3 main.py

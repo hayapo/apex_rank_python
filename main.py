@@ -22,7 +22,7 @@ def main():
     #twitter_user_name_templateの{}の部分にrank_emojiとrank_pointを埋め込む
     #name = env.twitter_user_name_template.replace('{}','{}{}'.format(rank_emoji, str(rank_point)))
     #print(name)
-    pprint(res)
+    print(env.apex_user_identifier)
     #Twitterのユーザー名を変更
     #api = twitter.Api(env.CK, env.CS, env.AT, env.AS)
     #api.UpdateProfile(name=name)

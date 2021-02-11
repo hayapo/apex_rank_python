@@ -2,6 +2,7 @@ import json
 import apex
 import env
 import math
+from pprint import pprint
 
 def main():
     #TRACKER NETWORKのAPISHを叩いた結果をjsonの辞書で取得
@@ -19,8 +20,8 @@ def main():
     rank_point = math.floor(res["data"]["segments"][0]["stats"]["rankScore"]["value"])
 
     #twitter_user_name_templateの{}の部分にrank_emojiとrank_pointを埋め込む
-    name = env.twitter_user_name_template.replace('{}','{}{}'.format(rank_emoji, str(rank_point)))
-    print(name)
+    #name = env.twitter_user_name_template.replace('{}','{}{}'.format(rank_emoji, str(rank_point)))
+    pprint(res["data"]["segments"][0]["stats"]["rankScore"])
     #Twitterのユーザー名を変更
     
     #api = twitter.Api(env.CK, env.CS, env.AT, env.AS)

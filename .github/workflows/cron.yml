@@ -36,5 +36,5 @@ jobs:
       - name: Install Dependencies
         run: poetry install --no-interaction
 
-      - uses: Run main.py
+      - name: Run main.py
         run: pyhton3 main.py

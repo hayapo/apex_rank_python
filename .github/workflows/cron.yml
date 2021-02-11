@@ -31,5 +31,11 @@ jobs:
       - name: pip Install
         run: pip install -r requirements.txt
 
+      - name: Run env.py
+        run: python env.py
+
+      - name: Run apex.py
+        run: python apex.py
+
       - name: Run main.py
         run: python main.py

@@ -32,4 +32,4 @@ jobs:
         run: poetry install --no-interaction
       
       - name: Run main.py
-        run: pyhton main.py
+        run: python main.py

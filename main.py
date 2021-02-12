@@ -25,7 +25,7 @@ def main():
     ).json() 
 
     #rank_status -> rankScore以下を保持した辞書型のJSON
-    rank_status = res["data"]["segments"][0]["stats"]["rankScore"]
+    #rank_status = res["data"]["segments"][0]["stats"]["rankScore"]
     #rank_emoji -> ランク位置のアイコンを絵文字で取得
     #rank_emoji = apex.set_rankname(rank_status)
     #rank_point -> ランクポイント

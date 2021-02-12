@@ -25,16 +25,16 @@ def main():
     ).json() 
 
     #rank_status -> rankScore以下を保持した辞書型のJSON
-    #rank_status = res["data"]["segments"][0]["stats"]["rankScore"]
+    rank_status = res["data"]["segments"][0]["stats"]["rankScore"]
     #rank_emoji -> ランク位置のアイコンを絵文字で取得
-    #rank_emoji = apex.set_rankname(rank_status)
+    rank_emoji = apex.set_rankname(rank_status)
     #rank_point -> ランクポイント
-    #rank_point = math.floor(res["data"]["segments"][0]["stats"]["rankScore"]["value"])
+    rank_point = math.floor(res["data"]["segments"][0]["stats"]["rankScore"]["value"])
 
     #twitter_user_name_templateの{}の部分にrank_emojiとrank_pointを埋め込む
-    #name = env.twitter_user_name_template.replace('{}','{}{}'.format(rank_emoji, str(rank_point)))
-    #print(rank_status)
-    pprint(res)
+    name = env.twitter_user_name_template.replace('{}','{}{}'.format(rank_emoji, str(rank_point)))
+    print(name)
+    
     
     #Twitterのユーザー名を変更
     #api = twitter.Api(env.CK, env.CS, env.AT, env.AS)

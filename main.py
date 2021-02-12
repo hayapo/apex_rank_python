@@ -6,11 +6,6 @@ from pprint import pprint
 import os
 import logging
 
-
-trn_api_key = os.environ["TRN_API_KEY"]
-apex_user_identifier = os.environ["APEX_USER_IDENTIFIER"]
-twitter_user_name_template = os.environ["TWITTER_USER_NAME_TEMPLATE"]
-
 def main():
     logger = logging.getLogger('LoggingTest')
     logger.setLevel(10)

@@ -3,6 +3,11 @@ import apex
 import env
 import math
 from pprint import pprint
+import os
+
+trn_api_key = os.environ["TRN_API_KEY"]
+apex_user_identifier = os.environ["APEX_USER_IDENTIFIER"]
+twitter_user_name_template = os.environ["TWITTER_USER_NAME_TEMPLATE"]
 
 def main():
     #TRACKER NETWORKのAPISHを叩いた結果をJSONの辞書で取得

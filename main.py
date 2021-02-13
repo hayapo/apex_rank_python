@@ -29,7 +29,7 @@ def main():
     
     
     #Twitterのユーザー名を変更
-    api = twitter.api(env.CK, env.CS, env.AT, env.AS)
+    api = twitter.Api(consumer_key=env.CK, consumer_secret=env.CS, access_token_key=env.AT, access_token_secret=env.AS)
     api.UpdateProfile(name=name)
 
 if __name__ == "__main__":

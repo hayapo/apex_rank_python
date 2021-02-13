@@ -1,5 +1,5 @@
 # apex_rank_python
-このリポジトリは[uzimaru0000/apex_rank_status](https://github.com/uzimaru0000/apex_rank_status)をPythonで書いたものです。
+このリポジトリは[うじまるさん](https://twitter.com/uzimaru0000)の[uzimaru0000/apex_rank_status](https://github.com/uzimaru0000/apex_rank_status)をPythonで書かせていただいたものです。
 
 ## Env
 

@@ -1,10 +1,7 @@
-import json
-import apex
-import env
-import math
+import json, math, logging, twitter
+import apex,env
 from pprint import pprint
-import os
-import logging
+
 
 def main():
     logger = logging.getLogger('LoggingTest')
@@ -12,7 +9,7 @@ def main():
     sh = logging.StreamHandler()
     logger.addHandler(sh)       
     logger.debug('debug')
-    #TRACKER NETWORKのAPISHを叩いた結果をJSONの辞書で取得
+    #TRACKER NETWORKのAPIを叩いた結果をJSONの辞書で取得
     res = apex.get_status(
         env.trn_api_key,
         apex.set_platform('Origin'),
@@ -32,8 +29,8 @@ def main():
     
     
     #Twitterのユーザー名を変更
-    #api = twitter.Api(env.CK, env.CS, env.AT, env.AS)
-    #api.UpdateProfile(name=name)
+    api = twitter.Api(env.CK, env.CS, env.AT, env.AS)
+    api.UpdateProfile(name=name)
 
 if __name__ == "__main__":
     main()

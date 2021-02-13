@@ -27,7 +27,6 @@ def main():
     name = env.twitter_user_name_template.replace('{}','{}{}'.format(rank_emoji, str(rank_point)))
     print(name)
     
-    
     #Twitterのユーザー名を変更
     api = twitter.Api(consumer_key=env.CK, consumer_secret=env.CS, access_token_key=env.AT, access_token_secret=env.AS)
     api.UpdateProfile(name=name)

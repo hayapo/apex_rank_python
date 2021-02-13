@@ -14,7 +14,7 @@ Apex_rank = {\
     'Bronze' : emoji.emojize(':3rd_place_medal:'),\
     'Silver' : emoji.emojize(':2rd_place_medal:'),\
     'Gold' : emoji.emojize(':1rd_place_medal:'),\
-    'Platinum' : emoji.emojize(':shield:'),\
+    'Platinum' : emoji.emojize(':trophy:'),\
     'Diamond' : emoji.emojize(':gem_stone:'),\
     'Master' :  emoji.emojize(':atom_symbol:'),\
     'Predator' : emoji.emojize(':ogre:')\
@@ -28,7 +28,7 @@ def set_rankname(rank_status):
     elif 2800 <= rank_status['value'] < 4800:
         return Apex_rank['Gold'] #🥇
     elif 4800 <= rank_status['value'] < 7200:
-        return Apex_rank['Platinum'] #🛡
+        return Apex_rank['Platinum'] #🏆
     elif 7200 <= rank_status['value'] < 10000:
         return Apex_rank['Diamond']  #💎
     elif 10000 <= rank_status['value']:

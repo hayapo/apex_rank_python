@@ -1,16 +1,16 @@
 import emoji
 import requests
 
-Apex_platform = {\
+def set_platform(platform: str) -> str:
+    Apex_platform = {\
     'Origin' : 'origin',\
     'PS' : 'ps',\
     'XBOX ' : 'xbox'\
 }
-
-def set_platform(platform):
     return Apex_platform[platform]
 
-Apex_rank = {\
+def set_rankname(rank_status: int) -> str:
+    Apex_rank = {\
     'Bronze' : emoji.emojize(':3rd_place_medal:'),\
     'Silver' : emoji.emojize(':2rd_place_medal:'),\
     'Gold' : emoji.emojize(':1rd_place_medal:'),\
@@ -20,7 +20,6 @@ Apex_rank = {\
     'Predator' : emoji.emojize(':ogre:')\
     }
 
-def set_rankname(rank_status):
     if 0 <= rank_status['value']  < 1200:
         return Apex_rank['Bronze'] #🥉
     elif 1200 <= rank_status['value'] < 2800:
@@ -42,11 +41,11 @@ def set_rankname(rank_status):
     else:
         return emoji.emojize(':zzz:')
 
-def create_endpoint(platform, user_identifier):
+def create_endpoint(platform: str, user_identifier: str) -> str:
     return "https://public-api.tracker.gg/v2/apex/standard/profile/{}/{}".format(platform,user_identifier)
 
 
-def get_status(api_key, platform, user_identifier):
+def get_status(api_key: str, platform: str, user_identifier: str) -> dict:
     url = create_endpoint(platform,user_identifier)
     header = {"TRN-Api-Key":api_key}
     

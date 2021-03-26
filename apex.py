@@ -12,8 +12,8 @@ def set_platform(platform: str) -> str:
 def set_rankname(rank_status: int) -> str:
     Apex_rank = {\
     'Bronze' : emoji.emojize(':3rd_place_medal:'),\
-    'Silver' : emoji.emojize(':2rd_place_medal:'),\
-    'Gold' : emoji.emojize(':1rd_place_medal:'),\
+    'Silver' : emoji.emojize(':2nd_place_medal:'),\
+    'Gold' : emoji.emojize(':1st_place_medal:'),\
     'Platinum' : emoji.emojize(':trophy:'),\
     'Diamond' : emoji.emojize(':gem_stone:'),\
     'Master' :  emoji.emojize(':atom_symbol:'),\

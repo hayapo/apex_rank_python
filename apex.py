@@ -11,23 +11,23 @@ def set_platform(platform: str) -> str:
 
 def set_rankname(rank_status: int) -> str:
     Apex_rank = {\
-    'Bronze' : emoji.emojize(':3rd_place_medal:'),\
-    'Silver' : emoji.emojize(':2nd_place_medal:'),\
-    'Gold' : emoji.emojize(':1st_place_medal:'),\
-    'Platinum' : emoji.emojize(':trophy:'),\
+    'Bronze' : emoji.emojize(':brown_square:'),\
+    'Silver' : emoji.emojize(':white_large_square:'),\
+    'Gold' : emoji.emojize(':yellow_square:'),\
+    'Platinum' : emoji.emojize(':blue_square:'),\
     'Diamond' : emoji.emojize(':gem_stone:'),\
     'Master' :  emoji.emojize(':atom_symbol:'),\
     'Predator' : emoji.emojize(':ogre:')\
     }
 
     if 0 <= rank_status['value']  < 1200:
-        return Apex_rank['Bronze'] #🥉
+        return Apex_rank['Bronze'] #🟫
     elif 1200 <= rank_status['value'] < 2800:
-        return Apex_rank['Silver'] #🥈
+        return Apex_rank['Silver'] #⬜
     elif 2800 <= rank_status['value'] < 4800:
-        return Apex_rank['Gold'] #🥇
+        return Apex_rank['Gold'] #🟨
     elif 4800 <= rank_status['value'] < 7200:
-        return Apex_rank['Platinum'] #🏆
+        return Apex_rank['Platinum'] #🟦
     elif 7200 <= rank_status['value'] < 10000:
         return Apex_rank['Diamond']  #💎
     elif 10000 <= rank_status['value']:

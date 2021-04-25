@@ -14,7 +14,7 @@ def set_rankname(rank_status: int) -> str:
     'Bronze' : emoji.emojize(':brown_square:'),\
     'Silver' : emoji.emojize(':white_large_square:'),\
     'Gold' : emoji.emojize(':yellow_square:'),\
-    'Platinum' : emoji.emojize('ring:'),\
+    'Platinum' : emoji.emojize(':ring:'),\
     'Diamond' : emoji.emojize(':gem_stone:'),\
     'Master' :  emoji.emojize(':atom_symbol:'),\
     'Predator' : emoji.emojize(':ogre:')\

@@ -14,7 +14,7 @@ def set_rankname(rank_status: int) -> str:
     'Bronze' : emoji.emojize(':brown_square:'),\
     'Silver' : emoji.emojize(':white_large_square:'),\
     'Gold' : emoji.emojize(':yellow_square:'),\
-    'Platinum' : emoji.emojize(':globe_with_meridians:'),\
+    'Platinum' : emoji.emojize('ring:'),\
     'Diamond' : emoji.emojize(':gem_stone:'),\
     'Master' :  emoji.emojize(':atom_symbol:'),\
     'Predator' : emoji.emojize(':ogre:')\
@@ -27,7 +27,7 @@ def set_rankname(rank_status: int) -> str:
     elif 2800 <= rank_status['value'] < 4800:
         return Apex_rank['Gold'] #🟨
     elif 4800 <= rank_status['value'] < 7200:
-        return Apex_rank['Platinum'] #🌐
+        return Apex_rank['Platinum'] #💍
     elif 7200 <= rank_status['value'] < 10000:
         return Apex_rank['Diamond']  #💎
     elif 10000 <= rank_status['value']:

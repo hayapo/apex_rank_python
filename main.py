@@ -23,6 +23,8 @@ def main():
     rank_emoji: str = apex.set_rankname(rank_status)
     #rank_point -> ランクポイント
     rank_point: int = math.floor(res["data"]["segments"][0]["stats"]["rankScore"]["value"])
+    if rank_point == 0:
+        rank_point: str = ''
 
     #twitter_user_name_templateの{}の部分にrank_emojiとrank_pointを埋め込む
     name: str = env.twitter_user_name_template.replace('{}','{}{}'.format(rank_emoji, str(rank_point)))

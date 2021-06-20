@@ -20,7 +20,9 @@ def set_rankname(rank_status: int) -> str:
     'Predator' : emoji.emojize(':ogre:')\
     }
 
-    if 0 <= rank_status['value']  < 1200:
+    if 0 == rank_status['value'] :
+        return emoji.emojize(':zzz:')
+    elif 0 <= rank_status['value']  < 1200:
         return Apex_rank['Bronze'] #🟫
     elif 1200 <= rank_status['value'] < 2800:
         return Apex_rank['Silver'] #⬜

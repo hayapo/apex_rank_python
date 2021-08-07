@@ -4,6 +4,7 @@ from pprint import pprint
 
 def main():
 
+    #ログ出力
     logger = logging.getLogger('LoggingTest')
     logger.setLevel(10)
     sh = logging.StreamHandler()

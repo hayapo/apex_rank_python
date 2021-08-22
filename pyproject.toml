@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "apex_rank_python"
+version = "0.1.0"
+description = ""
+authors = ["Hayato Saito"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+emoji = "^1.4.2"
+idna = "^3.2"
+requests = "^2.26.0"
+requests-toolbelt = "^0.9.1"
+requests-unixsocket = "^0.2.0"
+twitter = "^1.19.3"
+urllib3 = "^1.26.6"
+python-twitter = "^3.5"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
